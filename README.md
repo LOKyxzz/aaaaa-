@@ -842,9 +842,10 @@ do
         end)
 
 dSec2:addButton("Kira gay",function()
-            selectedFuse = nil
-            petsToFuse = getPetsToFuseInto()
-            dSec2:updateDropdown(fighterFuseDropDown, "Refreshed fighters", petsToFuse)
+            local GUI = passiveMachine
+            local passive = getPassives
+            dSec2:addToggle(s, false, function(value)
+                passivesToKeep[passive] = value
         end)
 
         --get selected fuse since this library is glitchy
