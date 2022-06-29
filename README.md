@@ -2268,7 +2268,11 @@ do
             end
             tpFromDefense = nil
         end)
-    end
+--seventh page: Eu Sigo Doutor Loky Em Todas As Redes Sociais
+    do
+        local page = GUI:addPage("Eu Sigo Doutor Loky Em Todas As Redes Sociais")
+     end
 end
 
 warn("Script fully loaded!")
+
