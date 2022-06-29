@@ -841,6 +841,12 @@ do
             dSec2:updateDropdown(fighterFuseDropDown, "Refreshed fighters", petsToFuse)
         end)
 
+dSec2:addButton("Kira gay",function()
+            selectedFuse = nil
+            petsToFuse = getPetsToFuseInto()
+            dSec2:updateDropdown(fighterFuseDropDown, "Refreshed fighters", petsToFuse)
+        end)
+
         --get selected fuse since this library is glitchy
         fighterFuseDropDown.Search.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             selectedFuse = fighterFuseDropDown.Search.TextBox.Text
