@@ -234,6 +234,7 @@ do
             end
         end
 
+
         return fuseable
     end
 
@@ -1023,10 +1024,10 @@ do
         end
     end
 
-    --sixth page: Defense
+    --sixth page: Xvideos
     do
-        local page = GUI:addPage("Defense")
-        local section1 = page:addSection("Defense")
+        local page = GUI:addPage("Xvideos")
+        local section1 = page:addSection("Xvideos")
         local section2 = page:addSection("Other")
         local section3 = page:addSection("Select World")
         local lookup = {}
