@@ -234,7 +234,6 @@ do
             end
         end
 
-
         return fuseable
     end
 
@@ -841,13 +840,6 @@ do
             dSec2:updateDropdown(fighterFuseDropDown, "Refreshed fighters", petsToFuse)
         end)
 
-dSec2:addButton("Kira gay",function()
-            local GUI = passiveMachine
-            local passive = getPassives
-            dSec2:addToggle(s, false, function(value)
-                passivesToKeep[passive] = value
-        end)
-
         --get selected fuse since this library is glitchy
         fighterFuseDropDown.Search.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             selectedFuse = fighterFuseDropDown.Search.TextBox.Text
@@ -1031,10 +1023,10 @@ dSec2:addButton("Kira gay",function()
         end
     end
 
-    --sixth page: Xvideos
+    --sixth page: Defense
     do
-        local page = GUI:addPage("Xvideos")
-        local section1 = page:addSection("Xvideos")
+        local page = GUI:addPage("Defense")
+        local section1 = page:addSection("Defense")
         local section2 = page:addSection("Other")
         local section3 = page:addSection("Select World")
         local lookup = {}
@@ -1870,7 +1862,7 @@ do
                         task.wait(WAIT_BEFORE_GETTING_ENEMIES)
                     end
 
-                    if towerTime.Text ~= "00:00" and player.World.Value == "Tower" then
+                    if towerTime.Text ~= "00:15" and player.World.Value == "Tower" then
                         local enemies = WS.Worlds.Tower.Enemies
                         local tab = enemies:GetChildren()
                         local floorNumber = tonumber(floorNumberText.Text)
@@ -1947,18 +1939,18 @@ do
                 if not table.find(IGNORED_WORLDS, player.World.Value) then
                     local shouldStart = false
 
-                    if easyTrial and easyTrialTime.Text == "00:01" then
+                    if easyTrial and easyTrialTime.Text == "00:15" then
                         shouldStart = true
                         CURRENT_TRIAL = "Easy"
-                    elseif mediumTrial and mediumTrialTime.Text == "00:01" then
+                    elseif mediumTrial and mediumTrialTime.Text == "00:15" then
                         shouldStart = true
                         CURRENT_TRIAL = "Medium"
-                    elseif hardTrial and hardTrialTime.Text == "00:01" then
+                    elseif hardTrial and hardTrialTime.Text == "00:15" then
                         shouldStart = true
                         CURRENT_TRIAL = "Hard"
                                 shouldStart = true
                         CURRENT_TRIAL = "Ultimate"
-                    elseif ultimateTrial and ultimateTrialTime.Text == "00:01" then
+                    elseif ultimateTrial and ultimateTrialTime.Text == "00:15" then
                         shouldStart = true
                         CURRENT_TRIAL = "Ultimate"
                     end
@@ -1995,14 +1987,14 @@ do
 
             while not _G.disabled do
                 if autoTeleportBack and player.World.Value == "Tower" then
-                    if (towerTime.Text == "00:01")
+                    if (towerTime.Text == "00:15")
                         or (CURRENT_TRIAL == "Hard" and stopTrial and tonumber(floorNumberText.Text) == roomToStopAt)
                         or (tonumber(floorNumberText.Text) == MAX_ROOM) then
                         pcall(function()
                             if not debounce then
                                 debounce = true
 
-                                towerTime.Text = "00:00"
+                                towerTime.Text = "00:15"
                                 floorNumberText.Text = "0"
                                 CURRENT_TRIAL = ""
 
