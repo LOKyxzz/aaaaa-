@@ -1937,21 +1937,21 @@ do
         task.spawn(function()
             while not _G.disabled do
                 if not table.find(IGNORED_WORLDS, player.World.Value) then
-                    local shouldStart = false
+                    local shouldStart = true
 
                     if easyTrial and easyTrialTime.Text == "00:15" then
-                        shouldStart = false
+                        shouldStart = true
                         CURRENT_TRIAL = "Easy"
                     elseif mediumTrial and mediumTrialTime.Text == "00:15" then
-                        shouldStart = false
+                        shouldStart = true
                         CURRENT_TRIAL = "Medium"
                     elseif hardTrial and hardTrialTime.Text == "00:15" then
-                        shouldStart = false
+                        shouldStart = true
                         CURRENT_TRIAL = "Hard"
                                 shouldStart = false
                         CURRENT_TRIAL = "Ultimate"
                     elseif ultimateTrial and ultimateTrialTime.Text == "00:15" then
-                        shouldStart = false
+                        shouldStart = true
                         CURRENT_TRIAL = "Ultimate"
                     end
 
