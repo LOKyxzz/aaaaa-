@@ -12,7 +12,7 @@ _G.themes = _G.themes or { -- themes
 }
 
 -- init
-local NAME = "loky hub ( auto trial )"
+local NAME = "loky hub ( auto trial "
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/juNstring/cracks/main/TinyTask%20Hub/ui.lua"))()
 local GUI = library.new(NAME)
 
