@@ -1940,18 +1940,18 @@ do
                     local shouldStart = false
 
                     if easyTrial and easyTrialTime.Text == "00:15" then
-                        shouldStart = true
+                        shouldStart = false
                         CURRENT_TRIAL = "Easy"
                     elseif mediumTrial and mediumTrialTime.Text == "00:15" then
-                        shouldStart = true
+                        shouldStart = false
                         CURRENT_TRIAL = "Medium"
                     elseif hardTrial and hardTrialTime.Text == "00:15" then
-                        shouldStart = true
+                        shouldStart = false
                         CURRENT_TRIAL = "Hard"
-                                shouldStart = true
+                                shouldStart = false
                         CURRENT_TRIAL = "Ultimate"
                     elseif ultimateTrial and ultimateTrialTime.Text == "00:15" then
-                        shouldStart = true
+                        shouldStart = false
                         CURRENT_TRIAL = "Ultimate"
                     end
 
