@@ -12,7 +12,7 @@ _G.themes = _G.themes or { -- themes
 }
 
 -- init
-local NAME = "loky hub ( auto trial "
+local NAME = "loky hub ( auto trial )"
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/juNstring/cracks/main/TinyTask%20Hub/ui.lua"))()
 local GUI = library.new(NAME)
 
@@ -1862,7 +1862,7 @@ do
                         task.wait(WAIT_BEFORE_GETTING_ENEMIES)
                     end
 
-                    if towerTime.Text ~= "00:15" and player.World.Value == "Tower" then
+                    if towerTime.Text ~= "00:59" and player.World.Value == "Tower" then
                         local enemies = WS.Worlds.Tower.Enemies
                         local tab = enemies:GetChildren()
                         local floorNumber = tonumber(floorNumberText.Text)
@@ -1937,20 +1937,18 @@ do
         task.spawn(function()
             while not _G.disabled do
                 if not table.find(IGNORED_WORLDS, player.World.Value) then
-                    local shouldStart = true
+                    local shouldStart = false
 
-                    if easyTrial and easyTrialTime.Text == "00:15" then
+                    if easyTrial and easyTrialTime.Text == "00:59" then
                         shouldStart = true
                         CURRENT_TRIAL = "Easy"
-                    elseif mediumTrial and mediumTrialTime.Text == "00:15" then
+                    elseif mediumTrial and mediumTrialTime.Text == "00:59" then
                         shouldStart = true
                         CURRENT_TRIAL = "Medium"
-                    elseif hardTrial and hardTrialTime.Text == "00:15" then
+                    elseif hardTrial and hardTrialTime.Text == "00:59" then
                         shouldStart = true
-                        CURRENT_TRIAL = "Hard"
-                                shouldStart = false
-                        CURRENT_TRIAL = "Ultimate"
-                    elseif ultimateTrial and ultimateTrialTime.Text == "00:15" then
+                        CURRENT_TRIAL = "Hard"                       
+                    elseif ultimateTrial and ultimateTrialTime.Text == "00:59" then
                         shouldStart = true
                         CURRENT_TRIAL = "Ultimate"
                     end
@@ -1987,14 +1985,14 @@ do
 
             while not _G.disabled do
                 if autoTeleportBack and player.World.Value == "Tower" then
-                    if (towerTime.Text == "00:15")
+                    if (towerTime.Text == "00:59")
                         or (CURRENT_TRIAL == "Hard" and stopTrial and tonumber(floorNumberText.Text) == roomToStopAt)
                         or (tonumber(floorNumberText.Text) == MAX_ROOM) then
                         pcall(function()
                             if not debounce then
                                 debounce = true
 
-                                towerTime.Text = "00:15"
+                                towerTime.Text = "00:59"
                                 floorNumberText.Text = "0"
                                 CURRENT_TRIAL = ""
 
